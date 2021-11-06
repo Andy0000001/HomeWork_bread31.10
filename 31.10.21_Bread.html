@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+var buylist = [ "Хлеб","Масло","Апельсин" ]
+function showList(givenArr){
+    alert(givenArr.sort())
+}
+showList(buylist);
+
+function addItem(givenArr){
+    let item = prompt("Введите покупку");
+    if(givenArr.indexOf(item)== -1)
+    givenArr[givenArr.length]=item;
+    else
+    givenArr[givenArr.indexOf(item)]=givenArr
+    [givenArr.indexOf(item)] + "2шт.";
+}
+addItem(buylist);
+showList(buylist);
+
+function CustomerWish(givenArr){
+    var products = [];
+    var str = "";
+    var product = "";
+    let number = +prompt("Введите число покупок которые хотите совершить")
+    for(i = 0; number > i; i++)
+    products.push(prompt("Что вы хотите купить ?"))
+    alert(products);
+}
+CustomerWish(buylist);
+
+</script>
+
+</body>
+</html>
